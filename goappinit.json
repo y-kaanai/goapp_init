@@ -1,0 +1,16 @@
+{
+    "folders": [
+        "build",
+        "cmd",
+        "configs",
+        "developments",
+        "docs",
+	    "internal",
+	    "pkg",
+	    "test",
+        "tools"
+    ],
+    "files": [
+        "cmd/main.go"
+    ]
+}

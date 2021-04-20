@@ -1,16 +1,13 @@
-# Awesome-name
+# GoApp-Init
 
-![Badge Status](https://ci-as-a-service)
+<!-- ![Badge Status](https://ci-as-a-service) -->
 
 A initializer for Golang application
 
 ## Description
 
-私がGoで新たなアプリケーションを作成する際に、参考にしている [Standard Go Project Layout](https://qiita.com/vengavengavnega/items/2235589445dd0effda05) に則り、1コマンドで必要なフォルダを一括で作成します。
-
-***DEMO:***
-
-![Demo](https://image-url.gif)
+私がGoで新たなアプリケーションを作成する際に、参考にしている [Standard Go Project Layout](https://qiita.com/vengavengavnega/items/2235589445dd0effda05) に則り、  
+1コマンドで必要なフォルダを一括で作成することで、毎回ディレクトリを作成しなければならない煩わしさを解消する。
 
 ## Features
 
