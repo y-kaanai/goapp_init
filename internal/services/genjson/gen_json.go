@@ -14,14 +14,21 @@ func New() *Service {
 	return &Service{}
 }
 
+var (
+	jsonFileName string = "/goappinit.json"
+	jsonFilePath string
+)
+
 func (_ Service) Exec() {
-	src, err := os.Open("goappinit.json")
+	jsonFilePath = config.Conf.App.CurrentDir + "/internal/services/genjson" + jsonFileName
+
+	src, err := os.Open(jsonFilePath)
 	if err != nil {
 		log.Fatalln("Opne goappinit.json error: ", err)
 	}
 	defer src.Close()
 
-	dst, err := os.OpenFile(config.Conf.App.CurrentDir+"/"+"goappinit2.json", os.O_RDWR|os.O_CREATE, 0777)
+	dst, err := os.OpenFile(config.Conf.App.CurrentDir+jsonFileName, os.O_RDWR|os.O_CREATE, 0777)
 	if err != nil {
 		log.Fatalln("Create goappinit.json error: ", err)
 	}

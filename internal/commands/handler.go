@@ -4,9 +4,9 @@ import (
 	"flag"
 	"log"
 
+	"github.com/Kanai-Yuki/goapp_init/internal/services/appinit"
 	"github.com/Kanai-Yuki/goapp_init/internal/services/deljson"
 	"github.com/Kanai-Yuki/goapp_init/internal/services/genjson"
-	"github.com/Kanai-Yuki/goapp_init/internal/services/init"
 )
 
 func Handler() {
@@ -21,8 +21,9 @@ func Handler() {
 	case string(DelJson):
 		deljsonCli := deljson.New()
 		deljsonCli.Exec()
+	// goapp init
 	case string(AppInit):
-		initCli := init.New()
+		initCli := appinit.New()
 		initCli.Exec()
 	default:
 		log.Fatalln("unexpected command: ", flag.Args())
