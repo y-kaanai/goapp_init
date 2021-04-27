@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/Kanai-Yuki/goapp_init/config"
-	"github.com/Kanai-Yuki/goapp_init/internal/commands"
+	"github.com/Kanai-Yuki/goapp_init/pkg/commands"
 )
 
 func main() {

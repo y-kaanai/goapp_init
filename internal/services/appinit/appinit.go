@@ -21,14 +21,15 @@ type initJson struct {
 	Files   []string `json:"files"`
 }
 
-func (_ Service) Exec() {
-	file, err := os.Open("goappinit.json")
-	if err != nil {
-		log.Fatalln("Opne goappinit.json error: ", err)
-	}
-	defer file.Close()
+var (
+	initTextFile     string = "/init.text"
+	initTextFilePath string
+)
 
-	data, err := ioutil.ReadFile("goappinit.json")
+func (_ Service) Exec() {
+	initTextFilePath = config.Conf.App.CurrentDir + "/internal/services/appinit" + initTextFile
+
+	data, err := ioutil.ReadFile(config.Conf.App.CurrentDir + "goappinit.json")
 	if err != nil {
 		log.Fatalln("Opne goappinit.json error: ", err)
 	}
@@ -54,7 +55,7 @@ func (_ Service) Exec() {
 }
 
 func makeMainGo() {
-	src, err := os.Open("init.text")
+	src, err := os.Open(initTextFilePath)
 	if err != nil {
 		log.Fatalln("Opne init.text error: ", err)
 	}

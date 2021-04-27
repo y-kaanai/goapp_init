@@ -70,3 +70,14 @@ goapp del-json
 ## Author
 
 comming soon ...
+
+## Q&A
+
+### cannot find module providing package ~: working directory is not part of a module
+
+Try it ...
+
+```shel
+$ go mod init
+go: creating new go.mod: module github.com/user_name/dir_name
+```
