@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	// 環境変数の設定
 	config.New()
 
 	commands.Handler()

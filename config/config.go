@@ -14,12 +14,12 @@ func New() {
 }
 
 func newAppConfig() *AppConfig {
-	cd, err := os.Getwd()
+	currentDir, err := os.Getwd()
 	if err != nil {
 		log.Fatalln("Get current directory error: ", err)
 	}
 
 	return &AppConfig{
-		CurrentDir: cd,
+		CurrentDir: currentDir,
 	}
 }
